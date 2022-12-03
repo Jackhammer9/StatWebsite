@@ -1,0 +1,32 @@
+{% csrf_token %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Result</title>
+</head>
+<body>
+    <h1 style="text-align: center;">RVCE Statistics Results 2022</h1>
+    <br><br><br>
+    <form action="submit/" method="post">
+        {% csrf_token %}
+            <b>Enter Your USN</b>
+            <br><input type="text" name="usn">
+            <br><br>
+            <button type="submit">SUBMIT</button>
+    </form>
+    <div class="logo"></div>
+    
+    <br>
+
+    <div class="by-line">
+        Made By Aaditya Sahoo
+    </div>
+</body>
+
+<link rel="stylesheet" href="{% static 'index.css' %}">
+</html>

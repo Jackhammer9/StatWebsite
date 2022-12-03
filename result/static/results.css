@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @-moz-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @-o-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px;
+    }
+  }
+  @-webkit-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px;
+    }
+  }
+  @-moz-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px;
+    }
+  }
+  @-o-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px;
+    }
+  }
+  @keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px;
+    }
+  }
+  
+  body{
+    font-family: 'Roboto';
+    font-size: 2vw;
+    text-align: center;
+    background: url('data:image/webp;base64,UklGRt4BAABXRUJQVlA4TNIBAAAvj8FjAAUkR5LjRuBOaAUJdsP//ymlbo6OPaeK6L8bt5EcqStad6dgPPSCu7U2dh9EfKxna6231m6zA/W3TlkuN6b+8vT5ndmBoojkiYOvHFXMDuTfqPZx8emdVzE7kFsljh5dULE7UMo6aafz4ZFtxSezAw3SYeLdqVZT7mZ2oPNa5S6qdubb7EB/zGuqt248SrQ60FzqLaN3RZ2K81YHWiwwHjQ9mdXf7mbMDlQ3mRpnf1UN5KSrbtXsQMTM/GPmvk0iWTfTj8nsQLqBXIPPSSSq7G+DMTvQYvzMnatfblrNDhQW81ihHibRIhYHkp++Kws1cFJ2q9W42YH26p3eB1G7rnNeiT3raXYg4pa8KnWQI+4PswOVm8ckEh02lZxXx51mB3L+4uvbisPiQPIzFzpl92XFYXIgfZ45D/4ND/Rx5f302P8BkBw1g0uP8PKFx+xAcNDDg/8eHvz38OC/hwf/PTz47+HBfw8P/nt48N/Dg/8eHvz38OC/hwf/PTz47+HBfw8P/nt48N/Dg/8eHvz38OC/hwf/PTz47+GBdA8P/nt48N/Dg/8eHvz38OC/hwf/PTz47+HBfw8P/nt48N/Dg/8eHvz38MCFhwf/PTwP');
+  
+    -webkit-animation: bg-scrolling-reverse 3s infinite;
+    -moz-animation: bg-scrolling-reverse 3s infinite;
+    -o-animation: bg-scrolling-reverse 3s infinite;
+    animation: bg-scrolling-reverse 3s infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+    margin: 0;
+    color: aliceblue;
+  }
+
+  .logo{
+    position: fixed;
+    background-image: url("logo.png");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    opacity: 10%;
+    left: 27.5%;
+    top: 15%;
+  }
+
+  table, th, td {
+    border: 1px solid;
+  }
+
+table{
+    position: fixed;
+    text-align: center;
+    width: 25vw;
+    left: 37.5%;
+    border-collapse: collapse;
+    font-size: 1.5vw;
+}
+
+button{
+  opacity: 100%;
+  font-family: 'Roboto';
+  position: fixed;
+  bottom: 5vh;
+  width: 30vw;
+  height: 6vh;
+  left: 35%;
+  color: white;
+  background-color: green;
+  font-size: 2vw;
+  z-index: 99999;
+}
+
+@media (max-width: 600px) {
+
+  body{
+    font-size: 5vw;
+  }
+
+  .logo{
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    opacity: 10%;
+    left: 0%;
+    top: 0%;
+    
+  }
+
+  table{
+    font-size: 5vw;
+    left:27.5%;
+}
+
+button{
+  font-size: 5vw;
+}
+
+}

@@ -1,0 +1,122 @@
+{% csrf_token %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Result for {{usn}}</title>
+</head>
+<body>
+    <h1 style="text-align: center;">RVCE Statistics Results 2022</h1>
+    <br><br>
+    Name: {{name}}
+    <br>
+    USN: {{usn}}
+    <br><br>
+    <table border=1 frame=hsides  rules=rows>
+    <caption>Scorecard</caption>
+    <tr>
+        <td>Subject</td>
+        <td>CR</td>
+        <td>GR</td>
+        <td>GP</td>
+    </tr>
+        <tr>
+            <td>21MA11</td>
+            <td>{{cr1}}</td>
+            <td>{{s1}}</td>
+            <td>{{gp1}}</td>
+        </tr>
+        <tr>
+            <td>21CH12</td>
+            <td>{{cr2}}</td>
+            <td>{{s2}}</td>
+            <td>{{gp2}}</td>
+        </tr>
+        <tr>
+            <td>21CS13</td>
+            <td>{{cr3}}</td>
+            <td>{{s3}}</td>
+            <td>{{gp3}}</td>
+        </tr>
+        <tr>
+            <td>21ME14</td>
+            <td>{{cr4}}</td>
+            <td>{{s4}}</td>
+            <td>{{gp4}}</td>
+        </tr>
+        <tr>
+            <td>21EC15</td>
+            <td>{{cr5}}</td>
+            <td>{{s5}}</td>
+            <td>{{gp5}}</td>
+        </tr>
+        <tr>
+            <td>21HSY16</td>
+            <td>{{cr6}}</td>
+            <td>{{s6}}</td>
+            <td>{{gp6}}</td>
+        </tr>
+        <tr>
+            <td>21HSE17</td>
+            <td>{{cr7}}</td>
+            <td>{{s7}}</td>
+            <td>{{gp7}}</td>
+        </tr>
+        <tr>
+            <td>CUM Credit</td>
+            <td colspan="3">{{cc}}</td>
+        </tr>
+        <tr>
+            <td>SGPA</td>
+            <td colspan="3">{{sgpa}}</td>
+        </tr>
+        <tr>
+            <td>CGPA</td>
+            <td colspan="3">{{cgpa}}</td>
+        </tr>
+    </table>
+
+    <form action="download/" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="name" value="{{name}}">
+        <input type="hidden" name="usn" value="{{usn}}">
+        <input type="hidden" name="s1" value="{{s1}}">
+        <input type="hidden" name="s2" value="{{s2}}">
+        <input type="hidden" name="s3" value="{{s3}}">
+        <input type="hidden" name="s4" value="{{s4}}">
+        <input type="hidden" name="s5" value="{{s5}}">
+        <input type="hidden" name="s6" value="{{s6}}">
+        <input type="hidden" name="s7" value="{{s7}}">
+        <input type="hidden" name="cc" value="{{cc}}">
+        <input type="hidden" name="sgpa" value="{{sgpa}}">
+        <input type="hidden" name="cgpa" value="{{cgpa}}">
+
+        <input type="hidden" name="cr1" value="{{cr1}}">
+        <input type="hidden" name="cr2" value="{{cr2}}">
+        <input type="hidden" name="cr3" value="{{cr3}}">
+        <input type="hidden" name="cr4" value="{{cr4}}">
+        <input type="hidden" name="cr5" value="{{cr5}}">
+        <input type="hidden" name="cr6" value="{{cr6}}">
+        <input type="hidden" name="cr7" value="{{cr7}}">
+
+        <input type="hidden" name="gp1" value="{{gp1}}">
+        <input type="hidden" name="gp2" value="{{gp2}}">
+        <input type="hidden" name="gp3" value="{{gp3}}">
+        <input type="hidden" name="gp4" value="{{gp4}}">
+        <input type="hidden" name="gp5" value="{{gp5}}">
+        <input type="hidden" name="gp6" value="{{gp6}}">
+        <input type="hidden" name="gp7" value="{{gp7}}">
+        <input type="hidden" name="cc" value="{{cc}}">
+        <button type="submit">Download</button>
+    </form>
+
+    <div class="logo"></div>
+</body>
+
+<link rel="stylesheet" href="{% static 'results.css' %}">
+
+</html>
